@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework_6.3</title>
+</head>
+<body>
+    <script ></script>
+	<h2>Article header</h2>      
+      <div id = "text">	
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p> Fourth paragraph</p>
+      </div>
+    <p>Another text</p>
+    <script>
+        var pArray = document.querySelectorAll("div > p");
+        for ( let i = 0; i < pArray.length; i++){
+        document.write("Selector text "+ i + ": " + pArray[i].innerHTML+"</br>");//помилка виводить всі , не лише з тегу div
+        }
+        
+    </script>
+</body>
+
+    
+    
+</html>

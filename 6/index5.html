@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_6.5</title>
+</head>
+<body>
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+        </div>
+    <ul id="myList">
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+    <script>
+        var h1Elem = document.body.children[0];
+        h1Elem.style.background = "#90EE90"; 
+        var divElem = document.body.children[1];
+        divElem.firstElementChild.style.fontWeight = "600";
+        divElem.firstElementChild.nextElementSibling.style.color = "red";
+        divElem.lastElementChild.previousElementSibling.style.textDecoration ="underline";
+        divElem.lastElementChild.style.fontStyle ="italic";
+        var ulElem = document.body.children[2];
+        ulElem.style.display = "inline";
+        ulElem.innerHTML = "Makemevertical!" ;
+        var spanElem = document.body.children[3];
+        spanElem.style.visibility = "hidden";
+</script>
+</body>
+
+</html>

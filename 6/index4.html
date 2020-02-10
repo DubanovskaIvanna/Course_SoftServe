@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework_6.4</title>
+</head>
+<body>
+   
+    <ul id = "list">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+    </ul>
+    <script>
+       // Перший спосіб
+        var liElem = document.getElementById("list").firstElementChild;//1
+        alert(liElem.innerHTML);
+        liElem = document.getElementById("list").lastElementChild;//5
+        alert(liElem.innerHTML);
+        liElem = document.getElementById("list").firstElementChild.nextElementSibling;//2
+        alert(liElem.innerHTML);
+        liElem = document.getElementById("list").lastElementChild.previousElementSibling;//4
+        alert(liElem.innerHTML);
+        liElem = document.getElementById("list").lastElementChild.previousElementSibling.previousElementSibling;//3
+        alert(liElem.innerHTML);
+        
+        //Другий спосіб
+        var liArray = document.body.children[0];
+        alert(liArray.firstElementChild.innerHTML);//1
+        alert(liArray.lastElementChild.innerHTML);//5
+        alert(liArray.firstElementChild.nextElementSibling.innerHTML);//2
+        alert(liArray.lastElementChild.previousElementSibling.innerHTML);//4
+        alert(liArray.firstElementChild.nextElementSibling.nextElementSibling.innerHTML);//3
+
+        //Третій спосіб   
+        var liArrayTwo =  document.querySelectorAll("ul > li");
+        alert(liArrayTwo[0].innerHTML);
+        alert(liArrayTwo[4].innerHTML); 
+        alert(liArrayTwo[1].innerHTML);
+        alert(liArrayTwo[3].innerHTML);
+        alert(liArrayTwo[2].innerHTML);
+    </script>
+</body>
+</html>
