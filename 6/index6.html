@@ -14,6 +14,12 @@
         inputOne.value = prompt1;
         var inputTwo = document.getElementById("input2");
         inputTwo.value = prompt2;
+        //перезапис inputOne в inputTwo і навпаки із використанням тимчасової змінної
+        let temp = inputOne.value;
+        inputOne.value = inputTwo.value;
+        inputTwo.value = temp;
+
+
 
     </script>
 </body>
