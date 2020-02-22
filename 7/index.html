@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOMEWORK7</title>
+</head>
+<body>
+    <p id ='text'>I learning JavaScript events!</p> 
+    <div id = "div1">
+        <button  id="myBtn">Change style!</button>
+    </div>
+    <p id ="myP" ></p>
+    <form >
+        <select>
+            <option>Petro</option>
+            <option >John</option>
+            <option>Alise</option>
+            <option>Alex</option>
+            <option>Iren</option>
+        </select>
+        <button id ="four"> Choose and Delete </button>
+    </form>
+    <br>
+    <button id = "five" >Live button!</button>
+    <script>
+
+    //TASK1
+    let openTab = window.open("https://www.w3schools.com", "w3schools", "width=300,height=300");
+    openTab.resizeTo(500,500);
+    setTimeout(2000);
+    openTab.moveTo(200,200);
+    setTimeout(2000);
+    setTimeout(function(){ openTab.close() },5000);
+
+    //TASK2!!!
+    function chageCSS(event){ 
+        text.style.color = "orange";// колір шрифту – оранжевий,
+        text.style.fontSize = "20px";//розмір шрифту 20 пс, 5
+        text.style.fontFamily = "Comic Sans MS";//шрифт сімейства "Comic Sans MS".
+      }
+    myBtn.addEventListener("click",chageCSS);
+
+    //TASK3!!!
+    
+    let buttonOne = document.createElement("button");
+    let buttonTwo = document.createElement("button");
+    let buttonThree = document.createElement("button");
+    let aOne = document.createElement("a");
+
+    buttonOne.id = "btnOne";
+    buttonTwo.id = "btnTwo";
+    buttonThree.id = "btnThree";
+    aOne.id = "aOne";
+    aOne.href = "https://www.w3schools.com/";
+ 
+    buttonOne.innerHTML = " Blue";
+    buttonTwo.innerHTML = "Pink";
+    buttonThree.innerHTML = "Brown";
+    aOne.innerHTML = "W3";
+
+    myP.prepend(aOne);
+    myP.prepend(buttonThree);
+    myP.prepend(buttonTwo);
+    myP.prepend(buttonOne);
+
+
+    function changeBGColorWhite (){
+        document.firstElementChild.style.background = "white";
+        }
+    document.getElementById("btnOne").onclick = function (){document.firstElementChild.style.background = "blue";} ;
+    document.getElementById("btnTwo").ondblclick = function  (){document.firstElementChild.style.background = "pink";} ;
+    btnThree.addEventListener("mousedown" , function  (){document.firstElementChild.style.background = "brown"});
+    btnThree.addEventListener("mouseup",changeBGColorWhite) ;
+    aOne.addEventListener("mouseover",function  (){document.firstElementChild.style.background = "Yellow"});
+    aOne.addEventListener("mouseout",changeBGColorWhite);
+   
+    //TASK4!!!
+    // function deleteChousen () {
+    //    document.getElementsByTagName("option").remove(0);
+    // ;
+        
+    // }
+    // document.getElementById("four").onclick = deleteChousen ;
+   
+    
+    //TASK5!!!
+
+    five.onclick = function() { console.log("I was pressed!")};
+    five.addEventListener("mouseover", function(){console.log("Mouse on me!")});
+    five.addEventListener("mouseout", function(){console.log("Mouse is not on me!")});//вивід у консоль, а має на сторінку і не зникати
+
+    //TASK6!!!
+        var width = window.innerWidth ;
+        var height = window.innerHeight ;
+        document.writeln(`\n\n Width: ${width}\n, Height: ${height}`);//огорнути в івент
+
+    //TASK7!!!
+    
+    </script>
+
+</body>
+</html>
